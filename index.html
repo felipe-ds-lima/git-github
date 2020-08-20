@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Aprendendo GIT Flow</h1>
-    
+
     <h2>
       Master
     </h2>
@@ -15,7 +15,7 @@
       Essa branch é a versão de produção, não programar nela nunca, e só mergear
       ela com a branch de release ou hotfix.
     </p>
-    
+
     <h2>Hotfix</h2>
     <p>
       Essa branch serve para corrigir problemas direto da master, fazer checkout
@@ -24,6 +24,14 @@
       develop, de tiver alguma release para ser publicada, já faz agora tbm, se
       o bug afeta o alguma feature, pode fzr isso aqui tbm E na master você já
       cria a nova TAG de versão, depois disso, deletar a branch.
+    </p>
+
+    <h2>Develop</h2>
+    <p>
+      Essa branch de desenvolvimento geral, todas as novas features
+      desenvolvidas devem ser jogadas aqui e somente aqui, não se faz Merge da
+      develop direto na master, deve ser criada uma branch de release, e deve-se
+      evitar ao máximo commitar aqui também.
     </p>
   </body>
 </html>
