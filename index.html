@@ -7,5 +7,55 @@
   </head>
   <body>
     <h1>Aprendendo GIT Flow</h1>
+
+    <h2>
+      Master
+    </h2>
+    <p>
+      Essa branch é a versão de produção, nunca programar nela, e só dar merge
+      nela com a branch de release ou hotfix.
+    </p>
+
+    <h2>Hotfix</h2>
+    <p>
+      Essa branch serve para corrigir problemas direto da master, fazer checkout
+      na master, criar a branch hotfix/[versão atual da master], ex:
+      hotfix/v1.0.0, corrigir o bug, fazer merge dela direto na master e na
+      develop, se tiver alguma release para ser publicada, já faz agora também,
+      se o bug afeta o alguma feature, pode fazer isso aqui também. E na master
+      você já cria a nova TAG de versão, por exemplo v1.0.1. Depois disso,
+      deletar a branch.
+    </p>
+
+    <h2>Develop</h2>
+    <p>
+      Essa é a branch de desenvolvimento geral, todas as novas features
+      desenvolvidas devem ser mergeadas aqui e somente aqui. Não se faz merge da
+      develop direto na master, deve ser criada uma branch de release e deve-se
+      evitar ao máximo commitar aqui também.
+    </p>
+
+    <h2>Feature</h2>
+    <p>
+      Aqui são desenvolvidas as novas features, uma branch para cada feature, de
+      preferência não fazer muitas modificações aqui, apenas criar. Depois de
+      prontas deve-se fazer o merge dela na develop e então deleta-la (a branch
+      release). Após o merge com a develop, a branch da feture deve ser deletada
+      e não deve ser criada novamente. Mergear somente quando a feature estiver
+      pronta, e se ela quebrar algo, não subir. Se ela tem alguma dependência já
+      em develop, faz o merge da develop nela, se tiver conflitos na hora de
+      fazer o merge na develop, CORRIGIR IMEDIATAMENTE.
+    </p>
+
+    <h2>Release</h2>
+    <p>
+      Essa branch de release deve ser criada quando a(s) feature(s) estão
+      pronta(s) para ser(em) publicada(s) em produção, o padrão é release/[nova
+      versão], ex: release/v1.1.0, aqui será testadas as novas features, não
+      criar novas branchs a partir daqui, se tiver um bug corrigir aqui mesmo, e
+      fazer merge dela na develop caso haja novas mudanças. Finalizada e testada
+      a release, mandar pra master, criar a nova TAG, e também mergear a release
+      na develop, depois disso, deletar a branch.
+    </p>
   </body>
 </html>
